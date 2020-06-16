@@ -1,8 +1,16 @@
-* {background-color: antiquewhite;}
+/* * {background-color: antiquewhite;}
 * * {background-color: grey;}
 * * * {background-color: darksalmon;}
 * * * * {background-color: darkslategray;}
-* * * * * {background-color: floralwhite;}
+* * * * * {background-color: floralwhite;}*/
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: indigo;
+}
 
 .game {
   padding: 20px;
@@ -17,8 +25,27 @@
   transform: translate(-50%, -50%);
 }
 
+.status{
+  background-color: aqua;
+  font-size: 5rem;
+  font-family: 'Baloo Chettan 2', cursive;
+  padding: 1rem 6.8rem 2rem 6.8rem;
+  margin-bottom: -10px;
+  border-radius: 2px;
+}
+
+.the-board {
+  background-color: orange;
+  border-radius: 3px;
+  padding: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 10;
+}
 .board-row {
-  margin: 5px;
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -27,10 +54,39 @@
   align-items: center;
 }
 .square {
-  background-color: cadetblue;
-  margin: 5px;
-  padding: 5px;
-  height: 50px;
-  width: 50px;
-  font-size: 30px;
+  background-color: green;
+  margin: 0px 10px;
+  padding: 10px;
+  height: 10rem;
+  width: 10rem;
+  font-size: 6rem;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  color: antiquewhite;
+  font-family: 'Baloo Chettan 2', cursive;
+}
+.square:hover {
+  background-color: darkgreen;
+}
+
+.accessibility {
+  background-color: aqua;
+  align-self: stretch;
+  text-align: center;
+  border-radius: 2px;
+  margin-top: -5px;
+  padding: 2rem 0rem 1rem 0rem;
+}
+#play-again-button {
+  font-size: 4rem;
+  font-family: 'Baloo Chettan 2', cursive;
+  background-color: orange;
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  padding: 5px 20px;
+}
+#play-again-button:hover {
+  background-color: rgb(255, 196, 144);
 }

@@ -23,7 +23,6 @@ function Board(props) {
   function renderSquare(i) {
     return <Square onClick={() => props.onClick(i)} value={props.squares[i]} />;
   }
-
   return (
     <div className="the-board">
       <div className="board-row">
