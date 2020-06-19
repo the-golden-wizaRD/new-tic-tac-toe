@@ -99,10 +99,16 @@ body {
   outline: none;
   border-radius: 2rem;
   padding: 5px 20px;
+  transition: background 0.6s;
 }
 #play-again-button:hover {
-  background-color: rgb(255, 196, 144);
+  background-color: rgb(255, 196, 144) radial-gradient(circle, transparent 1%, rgb(255, 196, 144) 1%) center/15000%;;
   cursor: pointer;
+}
+#play-again-button:active {
+  background-color: orange;
+  background-size: 100%;
+  transition: background 0s;
 }
 
 @media screen and (max-width: 576px) {
