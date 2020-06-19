@@ -72,8 +72,14 @@ body {
   font-family: 'Baloo Chettan 2', cursive;
 }
 .square:hover {
-  background-color: darkgreen;
+  background: darkgreen radial-gradient(circle, transparent 1%, darkgreen 1%) center/15000%;
   cursor: pointer;
+  transition: background 0.6s;
+}
+.square:active {
+  background-color: green;
+  background-size: 100%;
+  transition: background 0s;
 }
 
 .accessibility {
