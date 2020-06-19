@@ -70,11 +70,11 @@ body {
   outline: none;
   color: antiquewhite;
   font-family: 'Baloo Chettan 2', cursive;
+  transition: background 0.6s;
 }
 .square:hover {
   background: darkgreen radial-gradient(circle, transparent 1%, darkgreen 1%) center/15000%;
   cursor: pointer;
-  transition: background 0.6s;
 }
 .square:active {
   background-color: green;
@@ -102,7 +102,7 @@ body {
   transition: background 0.6s;
 }
 #play-again-button:hover {
-  background-color: rgb(255, 196, 144) radial-gradient(circle, transparent 1%, rgb(255, 196, 144) 1%) center/15000%;
+  background-color: #ffc490 radial-gradient(circle, transparent 1%, #ffc490 1%) center/15000%;
   cursor: pointer;
 }
 #play-again-button:active {
