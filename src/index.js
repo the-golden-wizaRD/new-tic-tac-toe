@@ -2,6 +2,93 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 
+
+var width = 1900,
+  height = 1000,
+  increment = 40,
+  maxSpeed = 100,
+  minSpeed = 40,
+  maxLength = 300,
+  minLength = 100,
+  font_size = 20,
+  pos = 0;
+
+
+var holder,
+  lock = false,
+  loading_time = 5000;
+
+var characters = ["1", "0", "d", "r", "t"];
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+var randomText = function () {
+  return characters[getRandomInt(0, characters.length - 1)];
+};
+
+var thread = function () {
+  var div = document.createElement("div");
+  div.className = "thread";
+
+  var msg = "";
+
+  for (let i = 0; i < 200; i++) {
+    msg += randomText();
+  }
+  div.innerHTML = msg;
+  return div;
+};
+
+var animate = function (div, speed) {
+  var topVal = parseInt(div.style.top, 10);
+  if (topVal > height) {
+    holder.removeChild(div);
+  } else {
+    div.style.top = parseInt(topVal + speed) + "px";
+    setTimeout(function () {
+      animate(div, speed);
+    }, speed);
+  }
+};
+
+var matrix = function () {
+  var div = thread();
+  holder.appendChild(div);
+  div.style.left = pos + increment + "px";
+  pos += increment;
+  div.style.top = -5000 + "px";
+  console.log(div.style.top);
+
+  var speed = getRandomInt(minSpeed, maxSpeed);
+
+  setTimeout(function () {
+    animate(div, speed);
+  }, speed);
+  if (!lock) {
+    setTimeout(matrix, 20);
+  }
+};
+
+var stop = function () {
+  lock = true;
+};
+
+var loaded = function() {
+  document.getElementById("loader").style.display = "none";
+}
+
+window.onload = function () {
+  holder = document.getElementById("loader");
+  matrix();
+  
+  setTimeout(stop, 1200);
+  setTimeout(loaded,3000);
+};
+
+
+
 function Status(props) {
   const status = props.noWinner
     ? "No Winner"
