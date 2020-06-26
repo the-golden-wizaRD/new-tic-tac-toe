@@ -102,7 +102,7 @@ body {
   transition: background 0.6s;
 }
 #play-again-button:hover {
-  background: #ffc490 radial-gradient(circle, transparent 1%, #ffc490 1%) center/15000%;
+  background-color: #ffc490 radial-gradient(circle, transparent 1%, #ffc490 1%) center/15000%;
   cursor: pointer;
 }
 #play-again-button:active {
