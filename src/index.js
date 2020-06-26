@@ -7,7 +7,7 @@ var height = 1000,
    increment = 40,
    maxSpeed = 100,
    minSpeed = 40,
-   pos = 0;
+   pos = -20;
 
 
 var holder,
