@@ -3,20 +3,15 @@ import ReactDOM from "react-dom";
 import "./index.css";
 
 
-var width = 1900,
-  height = 1000,
-  increment = 40,
-  maxSpeed = 100,
-  minSpeed = 40,
-  maxLength = 300,
-  minLength = 100,
-  font_size = 20,
-  pos = 0;
+var height = 1000,
+   increment = 40,
+   maxSpeed = 100,
+   minSpeed = 40,
+   pos = 0;
 
 
 var holder,
-  lock = false,
-  loading_time = 5000;
+  lock = false;
 
 var characters = ["1", "0", "d", "r", "t"];
 
