@@ -9,9 +9,7 @@ import "./index.css";
 
 const increment = 40,
   maxSpeed = 100,
-  minSpeed = 40,
-  maxLength = 300,
-  minLength = 100;
+  minSpeed = 40;
 
 var holder,
   pos = -20;
