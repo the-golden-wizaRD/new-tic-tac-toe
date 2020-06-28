@@ -135,6 +135,16 @@ body {
 /*8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888*/
 /*                    matrix loader                                                                */
 
+@font-face {
+  font-family: matrix;
+  src: url(./fonts/matrix.otf);
+}
+
+@font-face {
+  font-family: matrix-face;
+  src: url(./fonts/matrix-face.otf);
+}
+
 body {
   padding: 20px;
 }
@@ -144,7 +154,7 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: #111;
+  background-color: indigo;
   padding: 20px;
   overflow: hidden;
   z-index: 100;
@@ -159,8 +169,9 @@ body {
   top: -2000px;
   line-height: 50px;
   font-size: 20px;
-  color: #1ec503;
+  color: orange;
   transition: all .4s;
+  font-family: matrix;
 }
 
 .fade {
@@ -183,7 +194,7 @@ body {
 .red-box {
   width: 12px;
   height: 25px;
-  border: red solid 2px;
+  border: aqua solid 2px;
   position: absolute;
 }
 
@@ -195,11 +206,15 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
-  border: red solid 4px;
-  color: red;
+  border: aqua solid 4px;
+  color: aqua;
   font-size: 100px;
   letter-spacing: 20px;
   text-align: center;
+  font-family: matrix-face;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slider {
@@ -207,7 +222,7 @@ body {
   height: 110px;
   position: absolute;
 
-  border: red solid 5px;
+  border: aqua solid 5px;
   animation-name: slide;
   animation-duration: .5s;
   animation-iteration-count: infinite;
