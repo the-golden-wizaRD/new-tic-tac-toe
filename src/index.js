@@ -12,7 +12,8 @@ const increment = 40,
   minSpeed = 40;
 
 var holder,
-  pos = -20;
+  pos = -20,
+  squareCount = 0;
 
 const characters = ["1", "0", "d", "r", "t"];
 
@@ -81,7 +82,12 @@ const matrix = function () {
   redbox.style.top =
     Math.floor(Math.random() * (parseInt(window.screen.height) - 100)) + "px";
 
-  var speed = getRandomInt(minSpeed, maxSpeed);
+  squareCount += 1;
+  if(squareCount > 5) {
+    redbox.style.display = "none";
+  }
+
+    var speed = getRandomInt(minSpeed, maxSpeed);
 
   setTimeout(function () {
     animate(div, speed, redbox);
